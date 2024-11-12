@@ -6,18 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SDET Portfolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <style>
-        .hero-pattern {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/img/1920x1080_1418468_[www.ArtFile.ru].jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        .section-min-height {
-            min-height: 100vh;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="bg-gray-50">
@@ -41,75 +30,67 @@
     <!-- Hero Section -->
     <section class="hero-pattern section-min-height flex items-center justify-center">
         <div class="container mx-auto px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-8">Software Development Engineer in Test
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-                    Специалист по автоматизации тестирования с фокусом на Python и современных технологиях
-                </p>
-                <div class="flex justify-center space-x-6">
-                    <a href="#contact"
-                        class="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-indigo-700 transition-colors">
-                        Связаться со мной
-                    </a>
-                    <a href="#projects"
-                        class="bg-white text-indigo-600 px-8 py-4 rounded-lg text-lg font-medium hover:bg-gray-100 transition-colors">
-                        Мои проекты
-                    </a>
-                </div>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-8">Software Development Engineer in Test</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
+                Специалист по автоматизации тестирования с фокусом на Python и современных технологиях
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="#contact" class="cta-button bg-indigo-600 text-white">Связаться со мной</a>
+                <a href="#projects" class="cta-button bg-white text-indigo-600">Мои проекты</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-min-height flex items-center bg-white">
-        <div class="container mx-auto px-6 lg:px-12 py-20">
+    <section id="about" class="section-min-height flex items-center bg-white relative overflow-hidden">
+        <div class="parallax-bg"></div>
+        <div class="container mx-auto px-6 lg:px-12 py-20 relative z-10">
             <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Обо мне</h2>
-            <div class="max-w-5xl mx-auto">
-                <!-- Main Grid Layout -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <!-- Text Content Column -->
-                    <div class="space-y-6">
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            <strong>Таков путь</strong><br>
-                            Я выбрал путь QA-инженера с прицелом на SDET, потому что меня всегда привлекала техническая
-                            сторона тестирования.
-                            Начав с ручного тестирования, я понял, что хочу не просто находить баги, а создавать
-                            инструменты для автоматизации.
-                            Помню, как начал изучать Python и написал свой первый автотест — это было как магия! Видеть,
-                            как компьютер сам
-                            выполняет то, что раньше приходилось делать вручную, очень вдохновляло и мотивировало к
-                            дальнейшему развитию.
-                        </p>
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            <strong>Погружение в программирование</strong><br>
-                            Постепенно я стал глубже погружаться в программирование, изучать фреймворки для
-                            автоматизации и различные подходы.
-                            Это позволило мне не только автоматизировать процесс тестирования, но и усовершенствовать
-                            навыки написания эффективного
-                            и стабильного кода. Я осознал, что нашел ту профессию, которая действительно увлекает.
-                        </p>
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            <strong>Развитие в сторону SDET</strong><br>
-                            Сейчас я активно развиваюсь в сторону SDET: изучаю не только автоматизацию тестирования, но
-                            и CI/CD процессы, контейнеризацию,
-                            лучшие практики разработки. Мне нравится работать на стыке разработки и тестирования, так
-                            как это позволяет мне видеть
-                            продукт целостно, решать важные задачи и создавать инструменты, полезные для всей команды.
-                        </p>
-                        <p class="text-xl text-gray-600 leading-relaxed">
-                            <strong>Мотивация и удовлетворение</strong><br>
-                            Я нахожу особое удовлетворение в том, что мой код не только выявляет проблемы, но и помогает
-                            предотвращать их появление.
-                            Возможность расти как в сторону тестирования, так и разработки делает этот путь особенно
-                            интересным и перспективным для меня.
-                        </p>
-                    </div>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div class="space-y-6 text-lg text-gray-600">
+                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
+                        title="Путь к успеху!">
+                        <strong>Таков путь</strong><br>
+                        Я выбрал путь QA-инженера с прицелом на SDET, потому что меня всегда привлекала техническая
+                        сторона тестирования.
+                        Начав с ручного тестирования, я понял, что хочу не просто находить баги, а создавать инструменты
+                        для автоматизации.
+                        Помню, как начал изучать Python и написал свой первый автотест — это было как магия! Видеть, как
+                        компьютер сам
+                        выполняет то, что раньше приходилось делать вручную, очень вдохновляло и мотивировало к
+                        дальнейшему развитию.
+                    </p>
+                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
+                        title="Глубокое погружение">
+                        <strong>Погружение в программирование</strong><br>
+                        Постепенно я стал глубже погружаться в программирование, изучать фреймворки для автоматизации и
+                        различные подходы.
+                        Это позволило мне не только автоматизировать процесс тестирования, но и усовершенствовать навыки
+                        написания эффективного
+                        и стабильного кода. Я осознал, что нашел ту профессию, которая действительно увлекает.
+                    </p>
+                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
+                        title="Развитие навыков">
+                        <strong>Развитие в сторону SDET</strong><br>
+                        Сейчас я активно развиваюсь в сторону SDET: изучаю не только автоматизацию тестирования, но и
+                        CI/CD процессы, контейнеризацию,
+                        лучшие практики разработки. Мне нравится работать на стыке разработки и тестирования, так как
+                        это позволяет мне видеть
+                        продукт целостно, решать важные задачи и создавать инструменты, полезные для всей команды.
+                    </p>
+                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
+                        title="Мотивация и удовлетворение">
+                        <strong>Мотивация и удовлетворение</strong><br>
+                        Я нахожу особое удовлетворение в том, что мой код не только выявляет проблемы, но и помогает
+                        предотвращать их появление.
+                        Возможность расти как в сторону тестирования, так и разработки делает этот путь особенно
+                        интересным и перспективным для меня.
+                    </p>
+                </div>
 
-                    <!-- Image Column -->
-                    <div class="flex justify-center md:justify-end">
-                        <img src="img/photo.png" alt="Profile" class="rounded-lg shadow-xl">
-                    </div>
+                <!-- Image Column -->
+                <div class="flex justify-center md:justify-end transform hover:scale-110 transition-transform">
+                    <img src="img/photo.png" alt="Profile" class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
@@ -117,80 +98,76 @@
 
 
 
+
     <!-- Projects Section -->
-    <section id="projects" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat"
-        style="background-image: url('img/lauren-mancke-aOC7TSLb1o8-unsplash.jpg'); background-size: 1920px 1080px;">
-        <!-- Web Automation Framework -->
-        <div
-            class="bg-white bg-opacity-80 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 mb-12">
-            <div class="p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Web Automation Framework</h3>
-                <p class="text-gray-600 mb-6 text-lg">Разработка масштабируемого фреймворка для автоматизации
-                    тестирования веб-приложений с использованием Python и Playwright.</p>
-                <ul class="text-gray-600 mb-8 space-y-2 text-lg">
-                    <li>• Page Object Pattern</li>
-                    <li>• Параллельное выполнение</li>
-                    <li>• Отчеты Allure</li>
-                    <li>• Интеграция с CI/CD</li>
-                </ul>
-                <a href="https://github.com/ZhikharevAl/ParaBank.git"
-                    class="text-indigo-600 hover:text-indigo-800 font-medium text-lg inline-flex items-center self-end">
-                    Посмотреть на GitHub
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
-            </div>
-        </div>
+    <section id="projects" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat project-bg">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- API Testing Framework -->
-        <div
-            class="bg-white bg-opacity-80 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 mb-12">
-            <div class="p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">UI and API Testing Framework</h3>
-                <p class="text-gray-600 mb-6 text-lg">Фреймворк для автоматизированного тестирования UI and REST
-                    API с
-                    генерацией подробных отчётов и интеграцией с CI/CD.</p>
-                <ul class="text-gray-600 mb-8 space-y-2 text-lg">
-                    <li>• Python + Selenium</li>
-                    <li>• Python + Requests</li>
-                    <li>• Pydentic валидация</li>
-                    <li>• Allure отчёты</li>
-                    <li>• Интеграция с CI/CD</li>
-                </ul>
-                <a href="https://github.com/ZhikharevAl/TestNest"
-                    class="text-indigo-600 hover:text-indigo-800 font-medium text-lg inline-flex items-center self-end">
-                    Посмотреть на GitHub
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
+            <!-- Web Automation Framework Project Card -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Web Automation Framework</h3>
+                    <p class="project-description">Разработка масштабируемого фреймворка для автоматизации тестирования
+                        веб-приложений с использованием Python и Playwright.</p>
+                    <ul class="project-features">
+                        <li>• Page Object Pattern</li>
+                        <li>• Параллельное выполнение</li>
+                        <li>• Отчеты Allure</li>
+                        <li>• Интеграция с CI/CD</li>
+                    </ul>
+                    <a href="https://github.com/ZhikharevAl/ParaBank.git" class="github-link">
+                        Посмотреть на GitHub
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </div>
 
-        <!-- Performance Testing -->
-        <div
-            class="bg-white bg-opacity-80 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 mb-12">
-            <div class="p-8 flex flex-col">
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">Gonkey Framework</h3>
-                <p class="text-gray-600 mb-6 text-lg">Набор автоматизированных тестов для открытых API NASA с
-                    использованием отчетов Gonkey и Allure.</p>
-                <ul class="text-gray-600 mb-8 space-y-2 text-lg">
-                    <li>• Go</li>
-                    <li>• Gonkey</li>
-                    <li>• Allure отчёты</li>
-                    <li>• Интеграция с CI/CD</li>
-                </ul>
-                <a href="https://github.com/ZhikharevAl/nasa-gonkey-suite"
-                    class="text-indigo-600 hover:text-indigo-800 font-medium text-lg inline-flex items-center self-end">
-                    Посмотреть на GitHub
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                </a>
+            <!-- UI and API Testing Framework Project Card -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">UI and API Testing Framework</h3>
+                    <p class="project-description">Фреймворк для автоматизированного тестирования UI и REST API с
+                        генерацией подробных отчётов и интеграцией с CI/CD.</p>
+                    <ul class="project-features">
+                        <li>• Python + Selenium</li>
+                        <li>• Python + Requests</li>
+                        <li>• Pydantic валидация</li>
+                        <li>• Allure отчёты</li>
+                        <li>• Интеграция с CI/CD</li>
+                    </ul>
+                    <a href="https://github.com/ZhikharevAl/TestNest" class="github-link">
+                        Посмотреть на GitHub
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Performance Testing Project Card -->
+            <div class="project-card">
+                <div class="project-content">
+                    <h3 class="project-title">Gonkey Framework</h3>
+                    <p class="project-description">Набор автоматизированных тестов для открытых API NASA с
+                        использованием отчетов Gonkey и Allure.</p>
+                    <ul class="project-features">
+                        <li>• Go</li>
+                        <li>• Gonkey</li>
+                        <li>• Allure отчёты</li>
+                        <li>• Интеграция с CI/CD</li>
+                    </ul>
+                    <a href="https://github.com/ZhikharevAl/nasa-gonkey-suite" class="github-link">
+                        Посмотреть на GitHub
+                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -252,34 +229,28 @@
         </div>
     </section>
 
-    <!-- Секция контактов -->
-    <section id="contact" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat"
-        style="background-image: url('img/alex-shuper-KwrPZDvZRPk-unsplash.jpg'); background-size: 640px 960px;">
+    <!-- Contact Section -->
+    <section id="contact" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat contact-bg">
         <div class="container mx-auto px-6 py-20">
             <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Контакты</h2>
-
             <div class="max-w-4xl mx-auto">
-                <div class="flex justify-center space-x-12">
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
                     <!-- GitHub -->
-                    <a href="https://github.com/ZhikharevAl" class="text-gray-700 hover:text-gray-900"
-                        aria-label="GitHub">
+                    <a href="https://github.com/ZhikharevAl" class="contact-icon" aria-label="GitHub">
                         <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
-                                clip-rule="evenodd" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                         </svg>
                     </a>
                     <!-- Email -->
-                    <a href="mailto:waltafunk@gmail.com" class="text-gray-700 hover:text-gray-900" aria-label="Email">
+                    <a href="mailto:waltafunk@gmail.com" class="contact-icon" aria-label="Email">
                         <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
                             <path
                                 d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.01-8-5.01V6h16zm-8 7l-8-5v10h16V8l-8 5z" />
                         </svg>
                     </a>
-
                     <!-- Telegram -->
-                    <a href="https://t.me/Alexey_Zhikharev" class="text-gray-700 hover:text-gray-900"
-                        aria-label="Telegram">
+                    <a href="https://t.me/Alexey_Zhikharev" class="contact-icon" aria-label="Telegram">
                         <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24">
                             <path
                                 d="M12.042 2.018c-5.523 0-10 4.477-10 10 0 5.524 4.477 10 10 10s10-4.476 10-10-4.477-10-10-10zm4.77 6.14l-1.822 8.644c-.138.617-.493.765-1 .474l-2.766-2.038-1.333 1.28c-.147.147-.27.27-.552.27l.198-2.82 5.128-4.634c.224-.197-.049-.307-.348-.11l-6.34 3.99-2.732-.853c-.593-.184-.605-.593.124-.876l10.664-4.117c.493-.184.924.11.763.872z" />
