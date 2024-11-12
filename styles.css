@@ -1,0 +1,217 @@
+/* Общие стили */
+.section-min-height {
+    min-height: 100vh;
+}
+
+/* Фоны */
+.hero-pattern {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/img/1920x1080_1418468_[www.ArtFile.ru].jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.project-bg {
+    background-image: url('img/lauren-mancke-aOC7TSLb1o8-unsplash.jpg');
+    background-size: cover;
+}
+
+.contact-bg {
+    background-image: url('img/alex-shuper-KwrPZDvZRPk-unsplash.jpg');
+    background-attachment: fixed; /* параллакс-эффект */
+    background-size: 640px 960px;
+}
+
+/* Кнопки */
+.cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    border-radius: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    background: linear-gradient(45deg, #6b5b95, #b8a9c9);
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #b8a9c9, #6b5b95);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button.bg-indigo-600:hover {
+    background-color: #4f46e5;
+}
+
+.cta-button.bg-white:hover {
+    background-color: #f3f4f6;
+}
+
+/* About me*/
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 1s ease-in-out;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 1s ease-in-out;
+}
+
+.hover\:bg-yellow-100:hover {
+    background-color: #daeaf1;
+}
+
+
+/* Карточки проектов */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Полупрозрачный белый фон */
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Слегка меняется прозрачность при наведении */
+}
+
+/* Внутреннее содержимое карточки */
+.project-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Заголовок проекта */
+.project-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+/* Описание проекта */
+.project-description {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+}
+
+/* Список особенностей проекта */
+.project-features {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: auto;
+    /* Отталкивает ссылку GitHub вниз */
+}
+
+/* Ссылка на GitHub */
+.github-link {
+    color: #4f46e5;
+    font-weight: 500;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #3730a3;
+}
+
+/* Иконка стрелки */
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.5rem;
+}
+
+
+/* Карточки навыков */
+.skill-card {
+    background-color: #f9fafb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* Иконки контактов */
+.contact-icon {
+    color: #4b5563;
+    transition: color 0.3s;
+}
+
+.contact-icon:hover {
+    color: #1f2937;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.contact-icon:hover {
+    animation: pulse 0.6s infinite;
+    /* эффект пульсации */
+}
