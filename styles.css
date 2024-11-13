@@ -1,6 +1,8 @@
 /* Общие стили */
 .section-min-height {
     min-height: 100vh;
+    position: relative;
+    /* Добавляем относительное позиционирование */
 }
 
 /* Фоны */
@@ -18,7 +20,8 @@
 
 .contact-bg {
     background-image: url('img/alex-shuper-KwrPZDvZRPk-unsplash.jpg');
-    background-attachment: fixed; /* параллакс-эффект */
+    background-attachment: fixed;
+    /* параллакс-эффект */
     background-size: 640px 960px;
 }
 
@@ -47,6 +50,66 @@
 
 .cta-button.bg-white:hover {
     background-color: #f3f4f6;
+}
+
+/* About section specific styles */
+#about {
+    position: relative;
+    overflow: visible;
+    /* Меняем overflow на visible */
+    z-index: 1;
+    /* Устанавливаем базовый z-index */
+}
+
+#about .container {
+    position: relative;
+    z-index: 2;
+    /* Контейнер должен быть выше фона */
+}
+
+/* Navigation styles */
+.flex.justify-between.items-center.h-20 {
+    position: relative;
+    z-index: 1000;
+    /* Навигация всегда должна быть поверх */
+}
+
+/* Interactive elements */
+.cta-button,
+.github-link,
+.contact-icon {
+    position: relative;
+    z-index: 3;
+    /* Интерактивные элементы должны быть кликабельны */
+}
+
+/* Parallax background */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    /* Фон должен быть на заднем плане */
+}
+
+/* Ensure content stays above background */
+.relative.z-10 {
+    position: relative;
+    z-index: 2;
+}
+
+/* Grid container for about section */
+.grid.grid-cols-1.md\:grid-cols-2.gap-12.items-start {
+    position: relative;
+    z-index: 2;
+}
+
+/* Text content */
+.space-y-6.text-lg.text-gray-600 {
+    position: relative;
+    z-index: 2;
 }
 
 /* About me*/
