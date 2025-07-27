@@ -1,349 +1,693 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDET Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Алексей Жихарев - SDET Portfolio</title>
+    <!-- Подключение файла со стилями -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Подключение шрифтов и Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body class="bg-gray-50">
+<body class="bg-black">
+    <!-- Digital Rain Background -->
+    <div class="digital-rain fixed inset-0 pointer-events-none z-0"></div>
+    
     <!-- Navigation -->
-    <nav class="bg-white bg-opacity-95 shadow-lg fixed w-full z-10">
+    <nav class="nav-tron fixed w-full z-50 transition-all duration-300 relative">
         <div class="container mx-auto px-6">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-gray-800">SDET Portfolio</a>
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold neon-cyan orbitron glitch">
+                    [АЛЕКСЕЙ.ЖИХАРЕВ]
                 </div>
-                <div class="hidden md:flex items-center space-x-12">
-                    <a href="#about" class="text-gray-600 hover:text-gray-900 text-lg">Обо мне</a>
-                    <a href="#projects" class="text-gray-600 hover:text-gray-900 text-lg">Проекты</a>
-                    <a href="#skills" class="text-gray-600 hover:text-gray-900 text-lg">Навыки</a>
-                    <a href="#contact" class="text-gray-600 hover:text-gray-900 text-lg">Контакты</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-cyan-400 transition-colors orbitron text-sm tracking-wider">БИОГРАФИЯ</a>
+                    <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors orbitron text-sm tracking-wider">ПРОЕКТЫ</a>
+                    <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors orbitron text-sm tracking-wider">НАВЫКИ</a>
+                    <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors orbitron text-sm tracking-wider">СВЯЗЬ</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-pattern section-min-height flex items-center justify-center">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-8">Software Development Engineer in Test</h1>
-            <p class="text-xl md:text-2xl text-gray-200 mb-12 leading-relaxed">
-                Специалист по автоматизации тестирования с фокусом на Python и современных технологиях
-            </p>
-            <div class="flex justify-center space-x-6">
-                <a href="#contact" class="cta-button bg-indigo-600 text-white">Связаться со мной</a>
-                <a href="#projects" class="cta-button bg-white text-indigo-600">Мои проекты</a>
+    <section class="hero-tron tron-grid relative">
+        <div class="circuit-pattern"></div>
+        
+        <!-- Data streams -->
+        <div class="data-stream" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="data-stream" style="left: 30%; animation-delay: 1s;"></div>
+        <div class="data-stream" style="left: 70%; animation-delay: 2s;"></div>
+        <div class="data-stream" style="left: 90%; animation-delay: 0.5s;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white">
+                    <div class="text-sm neon-orange orbitron tracking-widest mb-4">ИНИЦИАЛИЗАЦИЯ СИСТЕМЫ...</div>
+                    <h1 class="text-5xl lg:text-7xl font-bold mb-6 orbitron scan-lines">
+                        SOFTWARE<br>
+                        <span class="accent-cyan text-glow">
+                            DEVELOPMENT
+                        </span><br>
+                        <span class="accent-orange text-glow">
+                            ENGINEER.TEST
+                        </span>
+                    </h1>
+                    <div class="border-l-4 border-cyan-400 pl-6 mb-8">
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            > Специализируюсь на автоматизации тестирования<br>
+                            > Создание надежных фреймворков<br>
+                            > Нагрузочное тестирование и performance<br>
+                            > Обеспечение качества продукта через код
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="tron-button orbitron">
+                            УСТАНОВИТЬ.СВЯЗЬ
+                        </a>
+                        <a href="#projects" class="border-2 border-orange-500 text-orange-500 px-8 py-3 font-semibold orbitron hover:bg-orange-500 hover:text-black transition-all tracking-wider">
+                            ПРОСМОТР.ДАННЫХ
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block relative">
+                    <!-- Holographic display -->
+                    <div class="hologram rounded-lg p-8 float-1">
+                        <div class="text-center">
+                            <div class="hexagon mb-6">
+                                <span class="text-2xl">⚡</span>
+                            </div>
+                            <div class="text-cyan-400 orbitron text-lg mb-4">STATUS: ONLINE</div>
+                            <div class="text-xs text-gray-400 space-y-1">
+                                <div>Python.Framework: ACTIVE</div>
+                                <div>Performance.Monitor: RUNNING</div>
+                                <div>Quality.Assurance: OPTIMAL</div>
+                                <div>Test.Automation: ENABLED</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating geometric shapes -->
+                    <div class="absolute top-10 right-10 w-20 h-20 border-2 border-pink-500 float-2" style="clip-path: polygon(50% 0%, 0% 100%, 100% 100%);"></div>
+                    <div class="absolute bottom-20 left-10 w-16 h-16 border-2 border-cyan-400 float-3"></div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section-min-height flex items-center bg-white relative overflow-hidden">
-        <div class="parallax-bg"></div>
-        <div class="container mx-auto px-6 lg:px-12 py-20 relative z-10">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Обо мне</h2>
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div class="space-y-6 text-lg text-gray-600">
-                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
-                        title="Путь к успеху!">
-                        <strong>Таков путь</strong><br>
-                        Я выбрал путь QA-инженера с прицелом на SDET, потому что меня всегда привлекала техническая
-                        сторона тестирования.
-                        Начав с ручного тестирования, я понял, что хочу не просто находить баги, а создавать инструменты
-                        для автоматизации.
-                        Помню, как начал изучать Python и написал свой первый автотест — это было как магия! Видеть, как
-                        компьютер сам
-                        выполняет то, что раньше приходилось делать вручную, очень вдохновляло и мотивировало к
-                        дальнейшему развитию.
-                    </p>
-                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
-                        title="Глубокое погружение">
-                        <strong>Погружение в программирование</strong><br>
-                        Постепенно я стал глубже погружаться в программирование, изучать фреймворки для автоматизации и
-                        различные подходы.
-                        Это позволило мне не только автоматизировать процесс тестирования, но и усовершенствовать навыки
-                        написания эффективного
-                        и стабильного кода. Я осознал, что нашел ту профессию, которая действительно увлекает.
-                    </p>
-                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
-                        title="Развитие навыков">
-                        <strong>Развитие в сторону SDET</strong><br>
-                        Сейчас я активно развиваюсь в сторону SDET: изучаю не только автоматизацию тестирования, но и
-                        CI/CD процессы, контейнеризацию,
-                        лучшие практики разработки. Мне нравится работать на стыке разработки и тестирования, так как
-                        это позволяет мне видеть
-                        продукт целостно, решать важные задачи и создавать инструменты, полезные для всей команды.
-                    </p>
-                    <p class="text-xl leading-relaxed hover:bg-yellow-100 transform hover:scale-105 transition-transform"
-                        title="Мотивация и удовлетворение">
-                        <strong>Мотивация и удовлетворение</strong><br>
-                        Я нахожу особое удовлетворение в том, что мой код не только выявляет проблемы, но и помогает
-                        предотвращать их появление.
-                        Возможность расти как в сторону тестирования, так и разработки делает этот путь особенно
-                        интересным и перспективным для меня.
-                    </p>
-                </div>
-
-                <!-- Image Column -->
-                <div class="flex justify-center md:justify-end transform hover:scale-110 transition-transform">
-                    <img src="img/photo.png" alt="Profile" class="rounded-lg shadow-xl">
+    <section id="about" class="section-padding tron-grid relative">
+        <div class="circuit-pattern"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold neon-cyan orbitron mb-6 glitch">БИО.ДАННЫЕ</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto"></div>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6">
+                        <div class="tron-card p-6 hologram">
+                            <h3 class="text-xl font-semibold neon-cyan orbitron mb-3">🎯 ИНИЦИАЦИЯ.В.QA</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Начинал с ручного тестирования, но всегда стремился к техническим решениям. 
+                                Первый автотест на Python стал точкой невозврата — понял свое предназначение в коде.
+                            </p>
+                        </div>
+                        <div class="tron-card p-6 hologram">
+                            <h3 class="text-xl font-semibold neon-orange orbitron mb-3">⚡ PERFORMANCE.TESTING</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Специализируюсь на нагрузочном тестировании: JMeter, LoadRunner. 
+                                Настраиваю системы мониторинга: InfluxDB → Telegraf → Prometheus → Grafana.
+                            </p>
+                        </div>
+                        <div class="tron-card p-6 hologram">
+                            <h3 class="text-xl font-semibold neon-pink orbitron mb-3">🚀 ЭВОЛЮЦИЯ.В.SDET</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Развиваюсь на стыке разработки и тестирования: CI/CD, контейнеризация, архитектура. 
+                                Опыт с Java/Kotlin, Go. Строю мосты между качеством и скоростью разработки.
+                            </p>
+                        </div>
+                        <div class="tron-card p-6 hologram">
+                            <h3 class="text-xl font-semibold neon-cyan orbitron mb-3">💡 ФИЛОСОФИЯ.КОДА</h3>
+                            <p class="text-gray-300 leading-relaxed">
+                                Качество ≠ отсутствие багов. Качество = надежная архитектура + мониторинг + 
+                                инструменты, которые ускоряют команду, а не тормозят её.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center relative">
+                        <div class="hologram p-8 rounded-lg">
+                            <!-- ФОТО ТУТ -->
+                            <div class="photo-frame mx-auto mb-6">
+                                <!-- Замените src на путь к вашему фото -->
+                                <img src="img/photo.png" alt="Фото Алексея Жихарева" class="w-full h-full object-cover">
+                            </div>
+                            <div class="text-cyan-400 orbitron text-lg mb-4">SYSTEM.ARCHITECT</div>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div class="text-left">
+                                    <div class="text-gray-400">LOCATION:</div>
+                                    <div class="neon-cyan">Воронеж.RU</div>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-gray-400">STATUS:</div>
+                                    <div class="neon-orange">SEEKING.ROLE</div>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-gray-400">STACK:</div>
+                                    <div class="neon-pink">Python, Playwright, pytest</div>
+                                </div>
+                                <div class="text-left">
+                                    <div class="text-gray-400">MODE:</div>
+                                    <div class="neon-cyan">Remote.Ready</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
 
     <!-- Projects Section -->
-    <section id="projects" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat project-bg">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            <!-- Autotests of the charity service's backend -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">Autotests of the charity service's backend</h3>
-                    <p class="project-description">
-                        Индивидуальный фреймворк автоматизированного тестирования API бэкенда благотворительного
-                        сервиса,
-                        который помогает пожилым людям получать поддержку волонтеров в повседневных задачах, таких как
-                        покупка
-                        продуктов, уборка или сопровождение к врачам.
+    <section id="projects" class="section-padding tron-grid relative bg-gray-900 bg-opacity-50">
+        <div class="circuit-pattern"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold neon-orange orbitron mb-6">КЛЮЧЕВЫЕ.ПРОЕКТЫ</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-orange-500 to-cyan-400 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Три проекта, демонстрирующие навыки автоматизации, архитектуры фреймворков 
+                    и работы с современным технологическим стеком
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="tron-card p-8 hologram">
+                    <div class="flex items-center mb-6">
+                        <div class="hexagon mr-4" style="width: 40px; height: 35px;">
+                            <span class="text-lg">📊</span>
+                        </div>
+                        <h3 class="text-xl font-bold neon-orange orbitron">POSTGRESQL.MONITORING</h3>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Стек мониторинга производительности PostgreSQL с дашбордом в Grafana. 
+                        <span class="neon-cyan">Анализ метрик</span> и оптимизация SQL-запросов в реальном времени.
                     </p>
-                    <ul class="project-features">
-                        <li>• Спроектировал масштабируемый фреймворк с использованием Python 3.13, pytest, Playwright и
-                            Pydantic,
-                            обеспечивая легкость поддержки и адаптации к изменениям API.</li>
-                        <li>• Настроил контейнеризованную среду с Podman и CI/CD через GitHub Actions для стабильного
-                            выполнения тестов.</li>
-                        <li>• Реализовал mock-тестирование для надежной работы тестов при нестабильном API.</li>
-                        <li>• Выявил и задокументировал 15+ критических дефектов API с отчетами Allure, улучшив качество
-                            сервиса.</li>
-                        <li>• <strong>Результат:</strong> Повысил надежность API, обеспечив стабильность и безопасность
-                            для пользователей.</li>
-                        <li>• <strong>Технологии:</strong> Python 3.13, pytest, Playwright, Pydantic, Allure Report,
-                            GitHub Actions, Podman</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/fake_it_till_you_make_it.git" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                    
+                    <div class="mb-6">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge">INFLUXDB</span>
+                            <span class="tech-badge">TELEGRAF</span>
+                            <span class="tech-badge">PROMETHEUS</span>
+                            <span class="tech-badge">GRAFANA</span>
+                            <span class="tech-badge">DOCKER</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6 text-sm">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Интеграция postgres-exporter</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Анализ pg_stat_statements</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Дашборд для оптимизации SQL</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ZhikharevAl/PostgreSQL-Performance-Monitoring-SQL-Optimization-Dashboard" 
+                       class="inline-flex items-center neon-orange orbitron font-semibold transition-colors text-sm tracking-wider hover:text-white">
+                        <span class="mr-2">[CODE.REPOSITORY]</span>
+                        <span>→</span>
                     </a>
                 </div>
-            </div>
 
-
-            <!-- Python CI -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">Python CI</h3>
-                    <p class="project-description">A modern Python project template with comprehensive CI/CD setup using
-                        GitHub Actions and state-of-the-art development tools.</p>
-                    <ul class="project-features">
-                        <li>• Современный Python-стек: uv, ruff, pyright</li>
-                        <li>• Проверка типов с помощью Pyright</li>
-                        <li>• Линтинг и форматирование с помощью Ruff</li>
-                        <li>• Автоматизированное тестирование с pytest</li>
-                        <li>• Allure отчёты</li>
-                        <li>• Покрытие кода и интеграция с Codecov</li>
-                        <li>• Комплексная CI/CD настройка с GitHub Actions</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/python-ci.git" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                <!-- Project 2 -->
+                <div class="tron-card p-8 hologram">
+                    <div class="flex items-center mb-6">
+                        <div class="hexagon mr-4" style="width: 40px; height: 35px;">
+                            <span class="text-lg">🏥</span>
+                        </div>
+                        <h3 class="text-xl font-bold neon-cyan orbitron">API.TESTING.FRAMEWORK</h3>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Комплексный фреймворк для тестирования API благотворительного сервиса. 
+                        <span class="neon-orange">15+ критических дефектов</span> обнаружено, включая уязвимости авторизации.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge">PYTHON.3.13</span>
+                            <span class="tech-badge">PLAYWRIGHT</span>
+                            <span class="tech-badge">PYTEST</span>
+                            <span class="tech-badge">PYDANTIC</span>
+                            <span class="tech-badge">ALLURE</span>
+                            <span class="tech-badge">PODMAN</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6 text-sm">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Масштабируемая архитектура компонентов</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">CI/CD через GitHub Actions + контейнеры</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Mock-тестирование нестабильных API</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ZhikharevAl/fake_it_till_you_make_it" 
+                       class="inline-flex items-center neon-cyan orbitron font-semibold transition-colors text-sm tracking-wider hover:text-white">
+                        <span class="mr-2">[CODE.REPOSITORY]</span>
+                        <span>→</span>
                     </a>
                 </div>
-            </div>
 
-            <!-- Web Automation Framework Project Card -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">Web Automation Framework</h3>
-                    <p class="project-description">Разработка масштабируемого фреймворка для автоматизации тестирования
-                        веб-приложений с использованием Python и Playwright.</p>
-                    <ul class="project-features">
-                        <li>• Page Object Pattern</li>
-                        <li>• Параллельное выполнение</li>
-                        <li>• Отчеты Allure</li>
-                        <li>• Интеграция с CI/CD</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/ParaBank.git" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- UI and API Testing Framework Project Card -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">UI and API Testing Framework</h3>
-                    <p class="project-description">Фреймворк для автоматизированного тестирования UI и REST API с
-                        генерацией подробных отчётов и интеграцией с CI/CD.</p>
-                    <ul class="project-features">
-                        <li>• Python + Selenium</li>
-                        <li>• Python + Requests</li>
-                        <li>• Pydantic валидация</li>
-                        <li>• Allure отчёты</li>
-                        <li>• Интеграция с CI/CD</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/TestNest" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Performance Testing Project Card -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">Gonkey Framework</h3>
-                    <p class="project-description">Набор автоматизированных тестов для открытых API NASA с
-                        использованием отчетов Gonkey и Allure.</p>
-                    <ul class="project-features">
-                        <li>• Go</li>
-                        <li>• Gonkey</li>
-                        <li>• Allure отчёты</li>
-                        <li>• Интеграция с CI/CD</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/nasa-gonkey-suite" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- API Defect Hunt -->
-            <div class="project-card">
-                <div class="project-content">
-                    <h3 class="project-title">API Defect Hunt</h3>
-                    <p class="project-description">Фреймворк для автоматизированного тестирования API с использованием
-                        Python, Playwright, Pydantic</p>
-                    <ul class="project-features">
-                        <li>• Python + Playwright</li>
-                        <li>• Pydantic валидация</li>
-                        <li>• Ruff, pre-commit</li>
-                        <li>• Allure отчёты</li>
-                        <li>• Интеграция с CI/CD</li>
-                    </ul>
-                    <a href="https://github.com/ZhikharevAl/qa-hackathon-raptors" class="github-link">
-                        Посмотреть на GitHub
-                        <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                <!-- Project 3 -->
+                <div class="tron-card p-8 hologram">
+                    <div class="flex items-center mb-6">
+                        <div class="hexagon mr-4" style="width: 40px; height: 35px;">
+                            <span class="text-lg">🏆</span>
+                        </div>
+                        <h3 class="text-xl font-bold neon-pink orbitron">HACKATHON.PROJECT</h3>
+                    </div>
+                    
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Проект хакатона Raptors — фреймворк для автоматизированного 
+                        тестирования API с использованием <span class="neon-pink">современного Python-стека</span>.
+                    </p>
+                    
+                    <div class="mb-6">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-badge">PYTHON</span>
+                            <span class="tech-badge">PLAYWRIGHT</span>
+                            <span class="tech-badge">PYDANTIC</span>
+                            <span class="tech-badge">PYTEST-XDIST</span>
+                            <span class="tech-badge">PRE-COMMIT</span>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-3 mb-6 text-sm">
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Параллельное выполнение тестов</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Валидация данных через Pydantic</span>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mt-2 mr-3"></div>
+                            <span class="text-gray-300">Система pre-commit hooks</span>
+                        </div>
+                    </div>
+                    
+                    <a href="https://github.com/ZhikharevAl/qa-hackathon-raptors" 
+                       class="inline-flex items-center neon-pink orbitron font-semibold transition-colors text-sm tracking-wider hover:text-white">
+                        <span class="mr-2">[CODE.REPOSITORY]</span>
+                        <span>→</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Секция технических навыков -->
-    <section id="skills" class="section-min-height flex items-center bg-white">
-        <div class="container mx-auto px-6 py-20">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-16">Технические навыки</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                <!-- Python -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🐍</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Python</h3>
-                    <p>PyTest, Selenium, Playwright, Requests</p>
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding tron-grid relative">
+        <div class="circuit-pattern"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold neon-pink orbitron mb-6">ТЕХНИЧЕСКИЕ.НАВЫКИ</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-pink-500 to-cyan-400 mx-auto mb-6"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto leading-relaxed orbitron">
+                    СТЕК ТЕХНОЛОГИЙ ДЛЯ СОЗДАНИЯ КАЧЕСТВЕННОГО ПО
+                </p>
+            </div>
+            
+            <div class="skill-grid">
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-cyan">🐍</div>
+                    <h3 class="font-semibold neon-cyan orbitron text-sm tracking-wider">PYTHON</h3>
+                    <p class="text-xs text-gray-400 mt-2">PYTEST, REQUESTS</p>
                 </div>
-
-                <!-- Testing -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🔍</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Testing</h3>
-                    <p>Unit Testing, Integration Testing, E2E Testing, Performance Testing</p>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-orange">🎭</div>
+                    <h3 class="font-semibold neon-orange orbitron text-sm tracking-wider">PLAYWRIGHT</h3>
+                    <p class="text-xs text-gray-400 mt-2">E2E TESTING</p>
                 </div>
-
-                <!-- Docker -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🐳 🦭</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Контейнеризация</h3>
-                    <p>Docker, Docker Compose, Podman</p>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-pink">☕</div>
+                    <h3 class="font-semibold neon-pink orbitron text-sm tracking-wider">JAVA/KOTLIN</h3>
+                    <p class="text-xs text-gray-400 mt-2">BACKEND.TEST</p>
                 </div>
-
-                <!-- CI/CD -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🔄</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">CI/CD</h3>
-                    <p>GitHub Actions</p>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-cyan">🐹</div>
+                    <h3 class="font-semibold neon-cyan orbitron text-sm tracking-wider">GO</h3>
+                    <p class="text-xs text-gray-400 mt-2">GONKEY.FRAMEWORK</p>
                 </div>
-
-                <!-- API -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🌐</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">API</h3>
-                    <p>REST, Postman, Swagger</p>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-orange">🐳</div>
+                    <h3 class="font-semibold neon-orange orbitron text-sm tracking-wider">DOCKER</h3>
+                    <p class="text-xs text-gray-400 mt-2">PODMAN</p>
                 </div>
-
-                <!-- Tools -->
-                <div
-                    class="p-8 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <span class="text-5xl mb-6 block">🛠️</span>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Tools</h3>
-                    <p>Git, Linux, Bash, SQL</p>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-pink">🔄</div>
+                    <h3 class="font-semibold neon-pink orbitron text-sm tracking-wider">CI/CD</h3>
+                    <p class="text-xs text-gray-400 mt-2">GITHUB.ACTIONS</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-cyan">📊</div>
+                    <h3 class="font-semibold neon-cyan orbitron text-sm tracking-wider">INFLUXDB</h3>
+                    <p class="text-xs text-gray-400 mt-2">TIME.SERIES.DB</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-orange">📈</div>
+                    <h3 class="font-semibold neon-orange orbitron text-sm tracking-wider">TELEGRAF</h3>
+                    <p class="text-xs text-gray-400 mt-2">METRICS.COLLECTION</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-pink">🔥</div>
+                    <h3 class="font-semibold neon-pink orbitron text-sm tracking-wider">PROMETHEUS</h3>
+                    <p class="text-xs text-gray-400 mt-2">MONITORING</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-cyan">📉</div>
+                    <h3 class="font-semibold neon-cyan orbitron text-sm tracking-wider">GRAFANA</h3>
+                    <p class="text-xs text-gray-400 mt-2">DASHBOARDS</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-orange">⚡</div>
+                    <h3 class="font-semibold neon-orange orbitron text-sm tracking-wider">JMETER</h3>
+                    <p class="text-xs text-gray-400 mt-2">LOAD.TESTING</p>
+                </div>
+                
+                <div class="skill-item hologram">
+                    <div class="skill-icon neon-pink">🚀</div>
+                    <h3 class="font-semibold neon-pink orbitron text-sm tracking-wider">LOADRUNNER</h3>
+                    <p class="text-xs text-gray-400 mt-2">PERFORMANCE</p>
+                </div>
+            </div>
+            
+            <!-- Skill Categories -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="tron-card p-8 hologram text-center">
+                    <div class="hexagon mx-auto mb-4">
+                        <span class="text-2xl">🧪</span>
+                    </div>
+                    <h3 class="text-xl font-semibold neon-cyan orbitron mb-4">TESTING.TYPES</h3>
+                    <div class="space-y-2 text-gray-300 text-sm">
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            <span>FUNCTIONAL.TESTING</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            <span>API.TESTING</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            <span>PERFORMANCE.TESTING</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            <span>LOAD.TESTING</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            <span>SECURITY.TESTING</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tron-card p-8 hologram text-center">
+                    <div class="hexagon mx-auto mb-4">
+                        <span class="text-2xl">🛠️</span>
+                    </div>
+                    <h3 class="text-xl font-semibold neon-orange orbitron mb-4">DEVELOPMENT</h3>
+                    <div class="space-y-2 text-gray-300 text-sm">
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            <span>FRAMEWORK.DESIGN</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            <span>CI/CD.PIPELINE</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            <span>CONTAINER.ORCHESTRATION</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            <span>MONITORING.STACK</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-orange-400 rounded-full mr-2"></div>
+                            <span>DATABASE.OPTIMIZATION</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tron-card p-8 hologram text-center">
+                    <div class="hexagon mx-auto mb-4">
+                        <span class="text-2xl">📈</span>
+                    </div>
+                    <h3 class="text-xl font-semibold neon-pink orbitron mb-4">ANALYTICS</h3>
+                    <div class="space-y-2 text-gray-300 text-sm">
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            <span>METRICS.COLLECTION</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            <span>PERFORMANCE.ANALYSIS</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            <span>SQL.OPTIMIZATION</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            <span>REPORT.GENERATION</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <div class="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            <span>DATA.VISUALIZATION</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-min-height flex items-center bg-cover bg-center bg-no-repeat contact-bg">
-        <div class="container mx-auto px-6 py-20">
-            <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">Контакты</h2>
+    <section id="contact" class="section-padding tron-grid relative bg-gray-900 bg-opacity-50">
+        <div class="circuit-pattern"></div>
+        <div class="container mx-auto px-6 text-center">
             <div class="max-w-4xl mx-auto">
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-12">
-                    <!-- GitHub -->
-                    <a href="https://github.com/ZhikharevAl" class="contact-icon" aria-label="GitHub">
-                        <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                        </svg>
+                <h2 class="text-4xl font-bold neon-cyan orbitron mb-6 glitch">УСТАНОВИТЬ.СВЯЗЬ</h2>
+                <div class="w-32 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto mb-8"></div>
+                
+                <div class="hologram p-12 rounded-lg mb-12">
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        > ГОТОВ К НОВЫМ ВЫЗОВАМ В ОБЛАСТИ SDET<br>
+                        > ИЩУ ПОЗИЦИЮ ДЛЯ РАЗВИТИЯ АВТОМАТИЗАЦИИ<br>
+                        > ОТКРЫТ ДЛЯ ИНТЕРЕСНЫХ ПРОЕКТОВ И СЛОЖНЫХ ЗАДАЧ<br>
+                        > НАГРУЗОЧНОЕ ТЕСТИРОВАНИЕ И СОЗДАНИЕ КАЧЕСТВЕННЫХ ПРОДУКТОВ
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="tron-card p-6">
+                            <div class="hexagon mx-auto mb-4" style="width: 50px; height: 43px;">
+                                <span class="text-lg">📍</span>
+                            </div>
+                            <div class="neon-cyan orbitron text-sm tracking-wider">ЛОКАЦИЯ</div>
+                            <div class="text-gray-300 mt-2">Воронеж.RU</div>
+                            <div class="text-xs text-gray-400 mt-1">Готов к переезду в Москву/СПб</div>
+                        </div>
+                        
+                        <div class="tron-card p-6">
+                            <div class="hexagon mx-auto mb-4" style="width: 50px; height: 43px;">
+                                <span class="text-lg">💼</span>
+                            </div>
+                            <div class="neon-orange orbitron text-sm tracking-wider">ФОРМАТ.РАБОТЫ</div>
+                            <div class="text-gray-300 mt-2">Удаленная работа</div>
+                            <div class="text-xs text-gray-400 mt-1">Гибридный формат</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                        <a href="mailto:waltafunk@gmail.com" 
+                           class="tron-button orbitron flex items-center gap-3">
+                            <span>📧</span>
+                            <span>EMAIL.LINK</span>
+                        </a>
+                        
+                        <a href="https://t.me/Alexey_Zhikharev" 
+                           class="border-2 border-pink-500 text-pink-500 px-8 py-3 font-semibold orbitron hover:bg-pink-500 hover:text-black transition-all tracking-wider flex items-center gap-3">
+                            <span>📱</span>
+                            <span>TELEGRAM.LINK</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-8">
+                    <a href="https://github.com/ZhikharevAl" 
+                       class="text-cyan-400 hover:text-white transition-colors transform hover:scale-110 flex flex-col items-center gap-2">
+                        <div class="hexagon" style="width: 50px; height: 43px;">
+                            <span class="text-lg">⚡</span>
+                        </div>
+                        <span class="orbitron text-xs tracking-wider">GITHUB</span>
                     </a>
-                    <!-- Email -->
-                    <a href="mailto:waltafunk@gmail.com" class="contact-icon" aria-label="Email">
-                        <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-                            <path
-                                d="M20 4H4C2.897 4 2 4.897 2 6v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 5.01-8-5.01V6h16zm-8 7l-8-5v10h16V8l-8 5z" />
-                        </svg>
+                    
+                    <a href="https://zhikhareval.github.io" 
+                       class="text-orange-400 hover:text-white transition-colors transform hover:scale-110 flex flex-col items-center gap-2">
+                        <div class="hexagon" style="width: 50px; height: 43px;">
+                            <span class="text-lg">🌐</span>
+                        </div>
+                        <span class="orbitron text-xs tracking-wider">WEBSITE</span>
                     </a>
-                    <!-- Telegram -->
-                    <a href="https://t.me/Alexey_Zhikharev" class="contact-icon" aria-label="Telegram">
-                        <svg class="h-14 w-14" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12.042 2.018c-5.523 0-10 4.477-10 10 0 5.524 4.477 10 10 10s10-4.476 10-10-4.477-10-10-10zm4.77 6.14l-1.822 8.644c-.138.617-.493.765-1 .474l-2.766-2.038-1.333 1.28c-.147.147-.27.27-.552.27l.198-2.82 5.128-4.634c.224-.197-.049-.307-.348-.11l-6.34 3.99-2.732-.853c-.593-.184-.605-.593.124-.876l10.664-4.117c.493-.184.924.11.763.872z" />
-                        </svg>
+                    
+                    <a href="tel:+79805576950" 
+                       class="text-pink-400 hover:text-white transition-colors transform hover:scale-110 flex flex-col items-center gap-2">
+                        <div class="hexagon" style="width: 50px; height: 43px;">
+                            <span class="text-lg">📞</span>
+                        </div>
+                        <span class="orbitron text-xs tracking-wider">PHONE</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-</body>
 
+    <!-- Footer -->
+    <footer class="bg-black border-t-2 border-cyan-400 py-8 relative">
+        <div class="container mx-auto px-6 text-center">
+            <div class="text-gray-400 orbitron text-sm tracking-wider">
+                © 2025 [АЛЕКСЕЙ.ЖИХАРЕВ] - PERFORMANCE/AUTOMATION.QA.ENGINEER
+            </div>
+            <div class="text-xs text-gray-600 mt-2 orbitron">
+                SYSTEM.STATUS: ONLINE | SEEKING.OPPORTUNITIES: TRUE
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50"></div>
+    </footer>
+
+    <script>
+        // Digital rain effect
+        function createRain() {
+            const rainContainer = document.querySelector('.digital-rain');
+            if (!rainContainer) return;
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 50; i++) {
+                const drop = document.createElement('div');
+                drop.className = 'rain-drop';
+                drop.textContent = chars[Math.floor(Math.random() * chars.length)];
+                drop.style.left = Math.random() * 100 + '%';
+                drop.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                drop.style.animationDelay = Math.random() * 2 + 's';
+                rainContainer.appendChild(drop);
+            }
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar effects on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('.nav-tron');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(0, 0, 0, 0.98)';
+                nav.style.borderBottomColor = '#00ffff';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.95)';
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animations
+        document.querySelectorAll('.tron-card, .skill-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Initialize effects
+        createRain();
+
+        // Glitch effect on title
+        setInterval(() => {
+            const glitchElements = document.querySelectorAll('.glitch');
+            glitchElements.forEach(el => {
+                el.style.animation = 'none';
+                setTimeout(() => {
+                    el.style.animation = 'glitch 2s infinite';
+                }, 10);
+            });
+        }, 5000);
+
+        // Random tech badge glow
+        setInterval(() => {
+            const badges = document.querySelectorAll('.tech-badge');
+            if(badges.length === 0) return;
+            const randomBadge = badges[Math.floor(Math.random() * badges.length)];
+            if (randomBadge) {
+                randomBadge.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.5)';
+                setTimeout(() => {
+                    randomBadge.style.boxShadow = 'none';
+                }, 1000);
+            }
+        }, 2000);
+    </script>
+</body>
 </html>

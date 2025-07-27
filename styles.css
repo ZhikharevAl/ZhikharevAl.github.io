@@ -1,294 +1,427 @@
-/* Общие стили */
-.section-min-height {
-    min-height: 100vh;
+/* Общие стили и шрифты */
+* {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.orbitron {
+    font-family: 'Orbitron', monospace;
+}
+
+body {
+    background: #0a0a0a;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+/* Tron Grid Background */
+.tron-grid {
+    background-image: 
+        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
     position: relative;
-    /* Добавляем относительное позиционирование */
 }
 
-/* Фоны */
-.hero-pattern {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/img/1920x1080_1418468_[www.ArtFile.ru].jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    filter: contrast(1.2) saturate(1.5);
-}
-
-.project-bg {
-    background-image: url('img/lauren-mancke-aOC7TSLb1o8-unsplash.jpg');
-    background-size: cover;
-}
-
-.contact-bg {
-    background-image: url('img/alex-shuper-KwrPZDvZRPk-unsplash.jpg');
-    background-attachment: fixed;
-    /* параллакс-эффект */
-    background-size: 640px 960px;
-}
-
-/* Кнопки */
-.cta-button {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-family: 'Arial', sans-serif;
-    border-radius: 20px;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    background: linear-gradient(45deg, #6b5b95, #b8a9c9);
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:hover {
-    background: linear-gradient(45deg, #b8a9c9, #6b5b95);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-.cta-button.bg-indigo-600:hover {
-    background-color: #4f46e5;
-}
-
-.cta-button.bg-white:hover {
-    background-color: #f3f4f6;
-}
-
-/* About section specific styles */
-#about {
-    position: relative;
-    overflow: visible;
-    /* Меняем overflow на visible */
-    z-index: 1;
-    /* Устанавливаем базовый z-index */
-}
-
-#about .container {
-    position: relative;
-    z-index: 2;
-    /* Контейнер должен быть выше фона */
-}
-
-/* Navigation styles */
-.flex.justify-between.items-center.h-20 {
-    position: relative;
-    z-index: 1000;
-    /* Навигация всегда должна быть поверх */
-}
-
-/* Interactive elements */
-.cta-button,
-.github-link,
-.contact-icon {
-    position: relative;
-    z-index: 3;
-    /* Интерактивные элементы должны быть кликабельны */
-}
-
-/* Parallax background */
-.parallax-bg {
+.tron-grid::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
-    /* Фон должен быть на заднем плане */
+    background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
 }
 
-/* Ensure content stays above background */
-.relative.z-10 {
+/* Dimmed Neon Effects for better readability */
+.neon-cyan {
+    color: #00ffff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.neon-orange {
+    color: #ff6600;
+    text-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+
+.neon-pink {
+    color: #ff0080;
+    text-shadow: 0 0 8px rgba(255, 0, 128, 0.6);
+}
+
+/* Bright text glow for main hero text (unchanged) */
+.text-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 15px currentColor;
+}
+
+/* Tron-style cards */
+.tron-card {
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(40, 40, 40, 0.8) 100%);
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #00ffff, #ff0080) 1;
     position: relative;
-    z-index: 2;
-}
-
-/* Grid container for about section */
-.grid.grid-cols-1.md\:grid-cols-2.gap-12.items-start {
-    position: relative;
-    z-index: 2;
-}
-
-/* Text content */
-.space-y-6.text-lg.text-gray-600 {
-    position: relative;
-    z-index: 2;
-}
-
-/* About me*/
-@keyframes fade-in {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-left {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-right {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.animate-fade-in {
-    animation: fade-in 1s ease-in-out;
-}
-
-.animate-slide-in-left {
-    animation: slide-in-left 1s ease-in-out;
-}
-
-.animate-slide-in-right {
-    animation: slide-in-right 1s ease-in-out;
-}
-
-.hover\:bg-yellow-100:hover {
-    background-color: #daeaf1;
-}
-
-
-/* Карточки проектов */
-.project-card {
-    width: 100%;
-    /* Полная ширина контейнера */
-    height: 100%;
-    /* Полная высота контейнера */
-    background-color: rgba(255, 255, 255, 0.85);
-    /* Полупрозрачный белый фон */
-    border-radius: 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.project-card:hover {
-    transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 0.95);
-    /* Слегка меняется прозрачность при наведении */
+.tron-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00ffff, #ff0080, #00ffff);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
-/* Внутреннее содержимое карточки */
-.project-content {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+.tron-card:hover::before {
+    opacity: 1;
 }
 
-/* Заголовок проекта */
-.project-title {
-    font-size: 1.75rem;
-    font-weight: bold;
-    color: #1f2937;
-    margin-bottom: 1rem;
+.tron-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
 }
 
-/* Описание проекта */
-.project-description {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-bottom: 1.5rem;
-}
-
-/* Список особенностей проекта */
-.project-features {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-bottom: auto;
-    /* Отталкивает ссылку GitHub вниз */
-}
-
-/* Ссылка на GitHub */
-.github-link {
-    color: #4f46e5;
-    font-weight: 500;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    margin-top: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.github-link:hover {
-    color: #3730a3;
-}
-
-/* Иконка стрелки */
-.icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: 0.5rem;
-}
-
-
-/* Карточки навыков */
-.skill-card {
-    background-color: #f9fafb;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    transition: transform 0.3s;
-    text-align: center;
-}
-
-.skill-card:hover {
-    transform: scale(1.05);
-}
-
-/* Иконки контактов */
-.contact-icon {
-    color: #4b5563;
-    transition: color 0.3s;
-}
-
-.contact-icon:hover {
-    color: #1f2937;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.1);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-.contact-icon:hover {
-    animation: pulse 0.6s infinite;
-    /* эффект пульсации */
-}
-
-/* Navigation styles */
-nav {
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    position: fixed;
+/* Circuit patterns */
+.circuit-pattern {
+    position: absolute;
     width: 100%;
-    z-index: 10;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='circuit' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300ffff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23ff0080;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M10 10h20v5h15v10h-10v15h-15v-5h-10z' fill='none' stroke='url(%23circuit)' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='3' fill='url(%23circuit)'/%3E%3Cpath d='M60 20h15v15h10v20h-20v-10h-15z' fill='none' stroke='url(%23circuit)' stroke-width='1'/%3E%3C/svg%3E");
+    animation: circuit-flow 20s linear infinite;
+}
+
+@keyframes circuit-flow {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-100px) translateY(-100px); }
+}
+
+/* Hexagon elements */
+.hexagon {
+    width: 60px;
+    height: 52px;
+    background: linear-gradient(135deg, #00ffff, #ff0080);
+    position: relative;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: all 0.3s ease;
+}
+
+.hexagon:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Стили для рамки фото */
+.photo-frame {
+    width: 200px;
+    height: 200px;
+    border: 2px solid #00ffff;
+    border-radius: 0%; /* Круглая рамка */
+    padding: 5px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 128, 0.1));
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    overflow: hidden; /* Обрезает изображение по кругу */
+    transition: all 0.3s ease;
+}
+
+.photo-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.7);
+}
+
+.photo-frame img {
+    border-radius: 0%;
+}
+
+
+/* Tech badges */
+.tech-badge {
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 128, 0.2));
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    padding: 4px 12px;
+    border-radius: 0;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    margin: 2px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tech-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #00ffff, #ff0080);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tech-badge:hover::before {
+    opacity: 0.1;
+}
+
+/* Navigation */
+.nav-tron {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid #00ffff;
+    backdrop-filter: blur(10px);
+}
+
+.nav-tron::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00ffff, #ff0080, #00ffff, transparent);
+    animation: nav-flow 3s ease-in-out infinite;
+}
+
+@keyframes nav-flow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Button styles */
+.tron-button {
+    background: transparent;
+    border: 2px solid #00ffff;
+    color: #00ffff;
+    padding: 12px 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tron-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.tron-button:hover::before {
+    left: 100%;
+}
+
+.tron-button:hover {
+    color: #000;
+    background: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Hero section */
+.hero-tron {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, rgba(0, 0, 0, 1) 70%);
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Digital rain effect */
+.digital-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.rain-drop {
+    position: absolute;
+    color: #00ffff;
+    font-family: 'Orbitron', monospace;
+    font-size: 14px;
+    animation: rain-fall linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes rain-fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Glitch effect */
+.glitch {
+    position: relative;
+    animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+    0%, 90%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-2px); }
+    40% { transform: translateX(2px); }
+    60% { transform: translateX(-2px); }
+    80% { transform: translateX(2px); }
+}
+
+/* Scan lines */
+.scan-lines {
+    position: relative;
+}
+
+.scan-lines::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 255, 255, 0.1) 0px,
+        transparent 1px,
+        transparent 2px,
+        rgba(0, 255, 255, 0.1) 3px
+    );
+    pointer-events: none;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(4px); }
+}
+
+/* Floating animations */
+.float-1 { animation: float-1 6s ease-in-out infinite; }
+.float-2 { animation: float-2 8s ease-in-out infinite; }
+.float-3 { animation: float-3 10s ease-in-out infinite; }
+
+@keyframes float-1 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-2 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-30px) rotate(-5deg); }
+}
+
+@keyframes float-3 {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(3deg); }
+}
+
+/* Section styling */
+.section-padding {
+    padding: 100px 0;
+}
+
+/* Accent gradients */
+.accent-cyan {
+    background: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.accent-orange {
+    background: linear-gradient(135deg, #ff6600 0%, #ff0080 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Hologram effect */
+.hologram {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 255, 0.1) 0%, 
+        rgba(255, 0, 128, 0.1) 25%,
+        rgba(0, 255, 255, 0.1) 50%,
+        rgba(255, 0, 128, 0.1) 75%,
+        rgba(0, 255, 255, 0.1) 100%);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.hologram::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+    animation: hologram-sweep 3s linear infinite;
+}
+
+@keyframes hologram-sweep {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* Data stream */
+.data-stream {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #00ffff, transparent);
+    animation: data-flow 2s linear infinite;
+}
+
+@keyframes data-flow {
+    0% { transform: translateY(-100px); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+/* Skills grid */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.skill-item {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 128, 0.1));
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: #00ffff;
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.2);
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
 }
